@@ -67,6 +67,9 @@ class NetworkManager: NSObject {
             switch httpResponse.statusCode {
             case 200:
                 
+                // Cache if setup
+                CacheManager.shared.store(request: req, response: response, data: data)
+                
                 if type.self == Empty200Response.self {
                     return .success(Empty200Response() as! T)
                 } else {
