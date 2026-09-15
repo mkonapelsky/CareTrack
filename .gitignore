@@ -1,1 +1,5 @@
 *.DS_Store
+
+# Xcode per-user settings and UI state
+xcuserdata/
+*.xcuserstate
